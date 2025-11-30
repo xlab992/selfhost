@@ -29,16 +29,16 @@ services:
      # - duckdns-data:/config
     #networks:
       #- proxy
-  mediaflow_proxy:
-    build: https://github.com/nzo66/mediaflow-proxy.git
-    container_name: mediaflow_proxy
+   mediaflow_proxy:
+    build: https://github.com/nzo66/EasyProxy.git
+    container_name: easyproxy
     env_file:
-      - ./mfp/.env
+      - ./easyproxy/.env
     restart: unless-stopped
     networks:
       - proxy
   mammamia:
-    build: ./mammamia
+    build: https://github.com/UrloMythus/MammaMia.git#main
     container_name: mammamia
     env_file:
       - ./mammamia/.env
